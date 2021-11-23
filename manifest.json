@@ -1,12 +1,22 @@
 {
-    "manifest_version": 2,
-    "version": "0.0.1",
-    "name": "Enable Floating Video",
-    "description": "Enable Floating Video",
-    "author": "Tiago Sousa",
-    "browser_action": {
-   	 "default_title": "Enable Floating Video",
-   	 "default_popup": "index.html",
-   	 "default_icon": "icon.png"
+  "manifest_version": 2,
+  "version": "0.0.1",
+  "name": "Enable Floating Video",
+  "description": "Enable Floating Video",
+  "author": "Tiago Sousa",
+  "browser_action": {
+    "default_title": "Enable Floating Video",
+    "default_popup": "index.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": ["index.js"],
+      "run_at": "document_end"    // Pay attention to this line
     }
+  ],
 }
