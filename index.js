@@ -1,8 +1,10 @@
-chrome.browserAction.onClicked.addListener(function(tab) {
-    chrome.tabs.executeScript(null, {execScript});
-});
+var success = false;
 
-function execScript() {
-    window.document.querySelector('video').removeAttribute('disablepictureinpicture');
-    window.document.querySelector('video').requestPictureInPicture();
+try {
+    document.getElementsByTagName('video')[0].removeAttribute('disablepictureinpicture');
+    document.getElementsByTagName('video')[0].requestPictureInPicture();
+    success = true;
 }
+catch(e) {}
+
+success;
