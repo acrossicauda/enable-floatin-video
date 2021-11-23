@@ -4,9 +4,10 @@
   "name": "Enable Floating Video",
   "description": "Enable Floating Video",
   "author": "Tiago Sousa",
+  "permissions": [
+    "tabs","<all_urls>"
+  ],
   "browser_action": {
-    "default_title": "Enable Floating Video",
-    "default_popup": "index.html",
     "default_icon": "icon.png"
   },
   "content_scripts": [
