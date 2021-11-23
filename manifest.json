@@ -13,7 +13,7 @@
     "webRequestBlocking"
   ],
   "options_ui": {
-    "page": "options.html",
+    "page": "index.html",
     "open_in_tab": true
   },
   "optional_permissions": [
