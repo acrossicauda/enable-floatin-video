@@ -18,5 +18,5 @@
       "js": ["index.js"],
       "run_at": "document_end"    // Pay attention to this line
     }
-  ],
+  ]
 }
