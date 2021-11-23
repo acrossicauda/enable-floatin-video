@@ -4,20 +4,27 @@
   "name": "Enable Floating Video",
   "description": "Enable Floating Video",
   "author": "Tiago Sousa",
+  "content_security_policy": "script-src 'self' https://www.youtube.com https://s.ytimg.com; object-src 'self'",
   "permissions": [
-    "tabs","<all_urls>"
+    "contextMenus",
+    "activeTab",
+    "*://www.youtube.com/*",
+    "webRequest",
+    "webRequestBlocking"
   ],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "optional_permissions": [
+    "*://www.youtube-nocookie.com/*",
+    "management"
+  ],
+  "background": {
+    "page": "index.html"
+  },
   "browser_action": {
     "default_icon": "icon.png"
-  },
-  "content_scripts": [
-    {
-      "matches": [
-        "http://*/*",
-        "https://*/*"
-      ],
-      "js": ["index.js"],
-      "run_at": "document_end"    // Pay attention to this line
-    }
-  ]
+  }
+
 }
