@@ -1,2 +1,2 @@
-$('video[disablepictureinpicture]').removeAttribute('disablepictureinpicture');
-$('video').requestPictureInPicture();
+document.querySelector('video').removeAttribute('disablepictureinpicture');
+document.querySelector('video').requestPictureInPicture();
